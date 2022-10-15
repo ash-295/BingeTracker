@@ -1,0 +1,18 @@
+.card{
+    min-width: 15rem;
+    padding: 2%;
+}
+
+.card .img-area{
+    border-bottom: 3px solid rgb(228, 64, 64);
+}
+.card .img-area img{
+    width: 100%;
+}
+
+.card .content-area{
+    background-color: #2a2929d1;
+    color: #ffffff;
+    text-align: left;
+    padding: 5%;
+}

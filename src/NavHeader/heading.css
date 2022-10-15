@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.heading-area{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1% 6% 0% 6%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.heading-area h1{
+    text-align: left;
+    letter-spacing: 0.1em;
+}
+.heading-area .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+.heading-area .menu ul li{
+    padding: 2%;
+}
+.heading-area .menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.heading-area .menu ul li a:hover{
+    color: #a6a6a6;
+}
+
+@media (max-width: 945px) {
+    .menu {
+        display: none;
+    }
+}

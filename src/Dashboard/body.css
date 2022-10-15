@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.outer-area{
+    overflow: hidden;
+    margin: 3% 7% 6% 7%;
+    font-family: 'Montserrat', sans-serif;
+}
+.outer-area h1{
+    color: #ffffff;
+}
+.inner-area{
+    display: flex;
+}
