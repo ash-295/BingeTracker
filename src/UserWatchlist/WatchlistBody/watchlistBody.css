@@ -65,3 +65,22 @@ input:checked + .slider::before{
     background-color: #ffffff;
     color: #000000;
 }
+
+.series-container .content-area{
+    width: 80%;
+    color: #ffffff;
+}
+
+.series-container .content-area .contents{
+    margin: 3% 0%;
+    background-color: #3b3b3b52;
+    width: 90%;
+    padding: 3%;
+    border: 2px solid white;
+    border-radius: 30px;
+    display: none;
+}
+
+.series-container .content-area .active-content{
+    display: block;
+}

@@ -1,0 +1,33 @@
+.watch-card{
+    position: relative;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	overflow: hidden;
+    width: 15rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 2%;
+}
+
+.watch-card img{
+    width: 100%;
+    transition: 0.25s;
+}
+
+.watch-card .info-area{
+    position: absolute;
+    width: 100%;
+    bottom: -25%;
+    background-color: #000000d0;
+    transition: 0.25s;
+    text-align: center;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+.watch-card:hover{
+    transform: scale(1.1);
+}
+
+.watch-card:hover .info-area{
+    bottom: 0%;
+}
