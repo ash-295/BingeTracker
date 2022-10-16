@@ -1,11 +1,12 @@
 import './watchlist.css';
 import Heading from '../NavHeader/heading';
+import WatchlistBody from './WatchlistBody/watchlistBody';
 
 function WatchlistPage() {
   return (
     <>
       <Heading/>
-      <h1>This is User Watchlist</h1>
+      <WatchlistBody/>
     </>
   );
 }

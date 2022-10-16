@@ -1,23 +1,71 @@
 import './loggedOutProfile.css';
 import google from './google-logo.png'
 import { useState } from 'react';
+import auth, { provider } from '../../_connection/firebase';
+import { signInWithPopup, signOut } from 'firebase/auth';
 
 function LoggedOut() {
     const [sign, setSign] = useState("SignIn with <img src={google} alt='Google'/>");
     const btn_change = () => {  
         setSign(`Logout`)
     };
-    return (
-        <>
-        <section>
-            <div class="container">
-                <button class="button login__submit">
-                    <span class="button__text">SignIn with <img src={google} alt='Google'/></span>
-                </button>
-            </div>
-        </section>
-        </>
-    );
+
+    const signInWithGoogle = () => {
+        signInWithPopup(auth, provider)
+        .then((response1) => {
+            localStorage.setItem("UID", response1.user.uid);
+            localStorage.setItem("Email", response1.user.email);
+            localStorage.setItem("Verified", response1.user.emailVerified);
+            localStorage.setItem("Username", response1.user.displayName);
+            localStorage.setItem("ProfilePic", response1.user.photoURL);
+            alert("User Logged In");
+        })
+        .catch((error1) => {
+            console.log(error1);
+        });
+    };
+    const signOutfromApp = () => {
+        signOut(auth).then(() => {
+            localStorage.setItem("UID", "");
+            localStorage.setItem("Email", "");
+            localStorage.setItem("Verified", "");
+            localStorage.setItem("Username", "");
+            localStorage.setItem("ProfilePic", "");
+            alert("User Logged Out");
+          }).catch((error) => {
+            console.log(error);
+          });
+    }
+    let uid = localStorage.getItem("UID");
+    if(uid === null || uid === undefined || uid === ""){
+        return (
+            <section>
+                <div class="container">
+                    <button onClick={signInWithGoogle} class="button login__submit">
+                        <span class="button__text">Sign In with <img src={google} alt='Google'/></span>
+                    </button>
+                </div>
+            </section>
+        );
+    }
+    else{
+        return (
+            <section>
+                <div className='profile-card'>
+                    <img src={localStorage.getItem("ProfilePic")} alt="profile-pic"/>
+                    <div className='userdata'>
+                        <h2>{localStorage.getItem("Username")}</h2>
+                        <h4>{localStorage.getItem("Email")}</h4>
+                    </div>
+                </div>
+                <div class="container">
+                    <button onClick={signOutfromApp} class="button login__submit">
+                        <span class="button__text">Logout</span>
+                    </button>
+                </div>
+            </section>
+        );
+    }
 }
 
 export default LoggedOut;

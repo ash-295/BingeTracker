@@ -5,7 +5,8 @@ function ProfilePage() {
   return (
     <>
       <Heading/>
-      <LoggedOut/>
+      <LoggedOut
+      />
     </>
   );
 }

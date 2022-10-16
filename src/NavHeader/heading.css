@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 .heading-area{
     color: #ffffff;
@@ -7,9 +8,13 @@
     display: grid;
     grid-template-columns: 2fr 3fr;
 }
+.active{
+    border-bottom: 2px solid #ffffff;
+}
 .heading-area h1{
     text-align: left;
-    letter-spacing: 0.1em;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 2px;
 }
 .heading-area .menu ul {
     list-style: none;

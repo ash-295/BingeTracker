@@ -1,0 +1,53 @@
+{
+    "user": {
+        "uid": "QVbHiSJcoQNQyJBJMItOHpU9tUo2",
+        "email": "aakashjena295@gmail.com",
+        "emailVerified": true,
+        "displayName": "Aakash Jena",
+        "isAnonymous": false,
+        "photoURL": "https://lh3.googleusercontent.com/a/ALm5wu2zKsK57miLB6j3QXEpgwSm6_tW16zIDkwpX1pmAw=s96-c",
+        "providerData": [
+            {
+                "providerId": "google.com",
+                "uid": "116971056321409850910",
+                "displayName": "Aakash Jena",
+                "email": "aakashjena295@gmail.com",
+                "phoneNumber": null,
+                "photoURL": "https://lh3.googleusercontent.com/a/ALm5wu2zKsK57miLB6j3QXEpgwSm6_tW16zIDkwpX1pmAw=s96-c"
+            }
+        ],
+        "stsTokenManager": {
+            "refreshToken": "AOEOulbxjybNhXH6zskxUF3hvIQTmrYohRNGKdscNepg_MLPX-cz9m_h1v41zQ4f_t9OkWoOHp3yeTiDdYvktngwVATynGoJ2rOac98ouVlPb_i4KLjovR_FBEsd9ADz0KIcmF1oY_l5kkCyWQtO_FX-vCZIkkvo6GHN8GHTtWgMfidf0DPKPQ1RPiBeFgJn57CcXdqnG2W-itr2iDrwu6Vd-2sWUQcZ_h2dQa6CP0AsJOKL5RTM_Jb1xhuKOhHWrvcijoWZD-QHyy-I15UQWO2PLIjAh6dqWEfySNijY1Y4zLvEu1p2uiGdAm-4ieMsiP39K7Tsanf_nj3_WH1Lr47LjunI3x7bAMwYFuXwWSfpu9HJXXncaPc-rwaRhzlAG2KzGJyGgDVVqBjaY2DioFT0WvKTILVQbU0VyFOZ9q77jEPL2Q-oiIQ",
+            "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk5NjJmMDRmZWVkOTU0NWNlMjEzNGFiNTRjZWVmNTgxYWYyNGJhZmYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQWFrYXNoIEplbmEiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnpLc0s1N21pTEI2ajNRWEVwZ3dTbTZfdFcxNnpJRGt3cFgxcG1Bdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9iaW5nZXRyYWNrZXItNzc0NTUiLCJhdWQiOiJiaW5nZXRyYWNrZXItNzc0NTUiLCJhdXRoX3RpbWUiOjE2NjU4MzczMDQsInVzZXJfaWQiOiJRVmJIaVNKY29RTlF5SkJKTUl0T0hwVTl0VW8yIiwic3ViIjoiUVZiSGlTSmNvUU5ReUpCSk1JdE9IcFU5dFVvMiIsImlhdCI6MTY2NTgzNzMwNCwiZXhwIjoxNjY1ODQwOTA0LCJlbWFpbCI6ImFha2FzaGplbmEyOTVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTY5NzEwNTYzMjE0MDk4NTA5MTAiXSwiZW1haWwiOlsiYWFrYXNoamVuYTI5NUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.nNoEXYWc-U6hSrydHJYmqnbrS51QwuNeTwPD4nSolyIyNvCOLiOdG2XrmCxiGizS_mvK4jDPw4n6uVfLXH5F-i37pJVWDKfX6xVQEYW7S7vy2rm4s6fF3Cz5SwUVf41oSSoxjrFgqa7yxBjedAiMu38vt238ia39av5hPOXACvrNphi0l13liCvC99WTJQ9QmThJKB0LV3YYB5y6OwYrKxjky8nBzClQAQTTuNnWyvLV-TlGmQVOR4pZulKNHHIrf8_aITPfcG1FmQUwPcDX1FgIPVKZ62rPZHZhA0EEEECWdtsiWzzPB8FCJmDPhCzG-G_DrJRO0mlhbWVjNps7fw",
+            "expirationTime": 1665840904148
+        },
+        "createdAt": "1665837303788",
+        "lastLoginAt": "1665837303789",
+        "apiKey": "AIzaSyCs7Szd2CaBSV0_k66Lu37cLzXvIY2j_Cg",
+        "appName": "[DEFAULT]"
+    },
+    "providerId": "google.com",
+    "_tokenResponse": {
+        "federatedId": "https://accounts.google.com/116971056321409850910",
+        "providerId": "google.com",
+        "email": "aakashjena295@gmail.com",
+        "emailVerified": true,
+        "firstName": "Aakash",
+        "fullName": "Aakash Jena",
+        "lastName": "Jena",
+        "photoUrl": "https://lh3.googleusercontent.com/a/ALm5wu2zKsK57miLB6j3QXEpgwSm6_tW16zIDkwpX1pmAw=s96-c",
+        "localId": "QVbHiSJcoQNQyJBJMItOHpU9tUo2",
+        "displayName": "Aakash Jena",
+        "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk5NjJmMDRmZWVkOTU0NWNlMjEzNGFiNTRjZWVmNTgxYWYyNGJhZmYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiQWFrYXNoIEplbmEiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnpLc0s1N21pTEI2ajNRWEVwZ3dTbTZfdFcxNnpJRGt3cFgxcG1Bdz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9iaW5nZXRyYWNrZXItNzc0NTUiLCJhdWQiOiJiaW5nZXRyYWNrZXItNzc0NTUiLCJhdXRoX3RpbWUiOjE2NjU4MzczMDQsInVzZXJfaWQiOiJRVmJIaVNKY29RTlF5SkJKTUl0T0hwVTl0VW8yIiwic3ViIjoiUVZiSGlTSmNvUU5ReUpCSk1JdE9IcFU5dFVvMiIsImlhdCI6MTY2NTgzNzMwNCwiZXhwIjoxNjY1ODQwOTA0LCJlbWFpbCI6ImFha2FzaGplbmEyOTVAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTY5NzEwNTYzMjE0MDk4NTA5MTAiXSwiZW1haWwiOlsiYWFrYXNoamVuYTI5NUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.nNoEXYWc-U6hSrydHJYmqnbrS51QwuNeTwPD4nSolyIyNvCOLiOdG2XrmCxiGizS_mvK4jDPw4n6uVfLXH5F-i37pJVWDKfX6xVQEYW7S7vy2rm4s6fF3Cz5SwUVf41oSSoxjrFgqa7yxBjedAiMu38vt238ia39av5hPOXACvrNphi0l13liCvC99WTJQ9QmThJKB0LV3YYB5y6OwYrKxjky8nBzClQAQTTuNnWyvLV-TlGmQVOR4pZulKNHHIrf8_aITPfcG1FmQUwPcDX1FgIPVKZ62rPZHZhA0EEEECWdtsiWzzPB8FCJmDPhCzG-G_DrJRO0mlhbWVjNps7fw",
+        "context": "",
+        "oauthAccessToken": "ya29.a0Aa4xrXOgeWjVonidjOkc3L4aymz3N9dzi9t4UQ3QgoPwVh66RD7u6jjhimRk55T5t92e3Rr5oae3hc0iDaR6v274cbfuymg5lvdF7Xrko-l9e5wfFPgN2AYiu_RbKC9YvsMAa_yJ6_KnM6kJVwPJmBf22CRdaCgYKATASARASFQEjDvL9XW8cPLJzACVRWCeh7SEYCA0163",
+        "oauthExpireIn": 3599,
+        "refreshToken": "AOEOulbxjybNhXH6zskxUF3hvIQTmrYohRNGKdscNepg_MLPX-cz9m_h1v41zQ4f_t9OkWoOHp3yeTiDdYvktngwVATynGoJ2rOac98ouVlPb_i4KLjovR_FBEsd9ADz0KIcmF1oY_l5kkCyWQtO_FX-vCZIkkvo6GHN8GHTtWgMfidf0DPKPQ1RPiBeFgJn57CcXdqnG2W-itr2iDrwu6Vd-2sWUQcZ_h2dQa6CP0AsJOKL5RTM_Jb1xhuKOhHWrvcijoWZD-QHyy-I15UQWO2PLIjAh6dqWEfySNijY1Y4zLvEu1p2uiGdAm-4ieMsiP39K7Tsanf_nj3_WH1Lr47LjunI3x7bAMwYFuXwWSfpu9HJXXncaPc-rwaRhzlAG2KzGJyGgDVVqBjaY2DioFT0WvKTILVQbU0VyFOZ9q77jEPL2Q-oiIQ",
+        "expiresIn": "3600",
+        "oauthIdToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk1NTEwNGEzN2ZhOTAzZWQ4MGM1NzE0NWVjOWU4M2VkYjI5YjBjNDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE2ODczMzE1MjM2LWRrZzBhaHVobzIycjc0dTF1cnZ0dWloNm01ZmlyY2RtLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE2ODczMzE1MjM2LWRrZzBhaHVobzIycjc0dTF1cnZ0dWloNm01ZmlyY2RtLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE2OTcxMDU2MzIxNDA5ODUwOTEwIiwiZW1haWwiOiJhYWthc2hqZW5hMjk1QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiOHp3eVZMcnE4cTh2bXZPSjM1aDZfUSIsImlhdCI6MTY2NTgzNzMwMywiZXhwIjoxNjY1ODQwOTAzfQ.fgvGsi-2aF370ul4CBjBO8yxRzqiwNLeQFhABybb_Re8gSZDaaABk-TFnSjF0Ogxenk4zzsGwYSeUMSgJWPWHfFroDw0swmMo0hkRdm2uvemnmsl4bqD3KNEtTssG3-QadKmyeo9TuTqOT26fETgei_1ErIZO8CYrQdT8WeOxNpJadRMf0djJrh-3DeJvC-C7gxEqkFcFSaee3G8zFKktqXTqISp9A10Ed85ec5Y7dXe2zNPcdDi6dftgqzOOtrbrDNB-I-jcS-qMgMG3iUl7pX8sEQTx55ZA6YOz4R_CI8byga9ESzyls_zY-mwWzpwTUeDJ4Bao6suIiQrnFICQQ",
+        "rawUserInfo": "{\"name\":\"Aakash Jena\",\"granted_scopes\":\"https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email\",\"id\":\"116971056321409850910\",\"verified_email\":true,\"given_name\":\"Aakash\",\"locale\":\"en\",\"family_name\":\"Jena\",\"email\":\"aakashjena295@gmail.com\",\"picture\":\"https://lh3.googleusercontent.com/a/ALm5wu2zKsK57miLB6j3QXEpgwSm6_tW16zIDkwpX1pmAw=s96-c\"}",
+        "isNewUser": true,
+        "kind": "identitytoolkit#VerifyAssertionResponse"
+    },
+    "operationType": "signIn"
+}

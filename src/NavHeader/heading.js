@@ -10,7 +10,7 @@ function Heading() {
       <div className='menu'>
         <ul>
           <li>
-            <NavLink to='/'>Trending Now</NavLink>
+            <NavLink to='/home'>Trending Now</NavLink>
           </li>
           <li>
             <NavLink to='/watchlist'>My Watchlist</NavLink>

@@ -1,0 +1,67 @@
+.switch-area{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.switch-area .switch{
+    background-color: brown;
+    width: 300px;
+    height: 50px;
+    display: inline;
+}
+
+.switch-area .switch input{
+    opacity: 0%;
+    height: 0%;
+    width: 0%;
+}
+
+.switch-area .switch .slider{
+    position: absolute;
+    cursor: pointer;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  */
+    /* background-color: antiquewhite; */
+}
+
+.switch-area .switch .slider::before{
+    position: absolute;
+    height: 40px;
+    width: 140px;
+    content: "Movies";
+    background-color: blueviolet;
+    transition: 0.7s;
+}
+
+input:checked + .slider::before{
+    left: 140px;
+    content: "Series";
+}
+
+.series-container {
+    width: 100%;
+}
+
+.series-container .nav-area{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.series-container .nav-area .tabs{
+    padding: 1%;
+    font-size: 1.2rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.series-container .nav-area .active-tab{
+    background-color: #ffffff;
+    color: #000000;
+}
