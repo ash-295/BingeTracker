@@ -42,16 +42,56 @@ function WatchlistBody() {
                     })}
                     </div>
                     <div className={tabState === 2 ? 'contents active-content' : 'contents'}>
-                        This is Watching Tab content
+                    {userWatchList.map((eachData) => {
+                        if(eachData.showStatus === "Watching"){
+                            return(
+                                <SeriesCard
+                                    showImg = {eachData.showImg}
+                                    name = {eachData.name}
+                                    watchedEpisode = {eachData.watchedEpisode}
+                                />
+                            )
+                        }
+                    })}
                     </div>
                     <div className={tabState === 3 ? 'contents active-content' : 'contents'}>
-                        This is Completed Tab content
+                    {userWatchList.map((eachData) => {
+                        if(eachData.showStatus === "Completed"){
+                            return(
+                                <SeriesCard
+                                    showImg = {eachData.showImg}
+                                    name = {eachData.name}
+                                    watchedEpisode = {eachData.watchedEpisode}
+                                />
+                            )
+                        }
+                    })}
                     </div>
                     <div className={tabState === 4 ? 'contents active-content' : 'contents'}>
-                        This is Plan to Watch Tab content
+                    {userWatchList.map((eachData) => {
+                        if(eachData.showStatus === "Plan to Watch"){
+                            return(
+                                <SeriesCard
+                                    showImg = {eachData.showImg}
+                                    name = {eachData.name}
+                                    watchedEpisode = {eachData.watchedEpisode}
+                                />
+                            )
+                        }
+                    })}
                     </div>
                     <div className={tabState === 5 ? 'contents active-content' : 'contents'}>
-                        This is Dropped Tab content
+                    {userWatchList.map((eachData) => {
+                        if(eachData.showStatus === "Dropped"){
+                            return(
+                                <SeriesCard
+                                    showImg = {eachData.showImg}
+                                    name = {eachData.name}
+                                    watchedEpisode = {eachData.watchedEpisode}
+                                />
+                            )
+                        }
+                    })}
                     </div>
                 </div>
             </section>

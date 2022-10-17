@@ -4,7 +4,6 @@
 	overflow: hidden;
     width: 15rem;
     border-radius: 20px;
-    display: inline-block;
     margin: 2%;
 }
 
@@ -30,4 +29,18 @@
 
 .watch-card:hover .info-area{
     bottom: 0%;
+}
+
+.watch-card .info-area button{
+    background-color: #7c210a;
+    color: #ffffff;
+    padding: 2% 8%;
+    border-radius: 10px;
+    font-weight: 700;
+
+}
+
+.watch-card .info-area button:hover{
+    background-color: #ffffff;
+    color: #7c210a;
 }

@@ -6,7 +6,12 @@
 .card .img-area{
     border-bottom: 3px solid rgb(228, 64, 64);
 }
-.card .img-area img{
+.card .img-area img{ 
+    /* user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
     width: 100%;
 }
 

@@ -82,5 +82,7 @@ input:checked + .slider::before{
 }
 
 .series-container .content-area .active-content{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

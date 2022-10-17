@@ -20,7 +20,6 @@ section{
 	padding: 16px 20px;
 	border-radius: 35px;
 	border: 2px solid #D4D3E8;
-	/* text-transform: uppercase; */
     font-size: 1.4rem;
 	font-weight: 600;
 	display: flex;
@@ -51,7 +50,7 @@ section{
 }
 
 .profile-card{
-	width: 50rem;
+	width: 60%;
 	display: flex;
 	background: rgb(255,255,255);
 	background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(116,116,116,1) 100%);

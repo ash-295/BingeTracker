@@ -5,10 +5,10 @@ import auth, { provider } from '../../_connection/firebase';
 import { signInWithPopup, signOut } from 'firebase/auth';
 
 function LoggedOut() {
-    const [sign, setSign] = useState("SignIn with <img src={google} alt='Google'/>");
-    const btn_change = () => {  
-        setSign(`Logout`)
-    };
+    const [sign, setSign] = useState(localStorage.getItem("UID"));
+    // const btn_change = () => {  
+    //     setSign(`Logout`)
+    // };
 
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider)
@@ -18,7 +18,7 @@ function LoggedOut() {
             localStorage.setItem("Verified", response1.user.emailVerified);
             localStorage.setItem("Username", response1.user.displayName);
             localStorage.setItem("ProfilePic", response1.user.photoURL);
-            alert("User Logged In");
+            setSign(localStorage.getItem("UID"));
         })
         .catch((error1) => {
             console.log(error1);
@@ -31,13 +31,14 @@ function LoggedOut() {
             localStorage.setItem("Verified", "");
             localStorage.setItem("Username", "");
             localStorage.setItem("ProfilePic", "");
-            alert("User Logged Out");
+            setSign(localStorage.getItem("UID"));
           }).catch((error) => {
             console.log(error);
           });
     }
-    let uid = localStorage.getItem("UID");
-    if(uid === null || uid === undefined || uid === ""){
+    console.log("checkpoint", typeof sign);
+    if(sign === "" || sign === null || sign === undefined){
+        console.log("In 1");
         return (
             <section>
                 <div class="container">
@@ -49,6 +50,7 @@ function LoggedOut() {
         );
     }
     else{
+        console.log("In 2");
         return (
             <section>
                 <div className='profile-card'>

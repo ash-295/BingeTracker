@@ -33,8 +33,65 @@
     color: #a6a6a6;
 }
 
+.heading-area .hamburger-menu{
+    display: none;
+}
+
 @media (max-width: 945px) {
     .menu {
         display: none;
+    }
+    .heading-area {
+        display: block;
+    }
+    .heading-area .brand{
+        display: inline-block;
+    }
+    .heading-area .hamburger-menu{
+        display: inline-block;
+        float: right;
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    .mobile-menu{
+        display: block;
+    }
+
+    .mobile-menu ul{
+        padding-inline-start: 0px;
+    }
+
+    .mobile-menu ul li{
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px){
+    .mobile-menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-menu ul li{
+        display: block;
+    }
+}
+
+@media (max-width: 500px){
+    .heading-area .brand h1{
+        font-size: 25px;
+    }
+    .heading-area .hamburger-menu{
+        margin-top: 1.6rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 350px){
+    .heading-area .brand h1{
+        font-size: 20px;
+    }
+    .heading-area .hamburger-menu{
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
     }
 }
