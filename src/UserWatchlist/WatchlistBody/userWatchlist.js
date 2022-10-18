@@ -13,6 +13,7 @@ import watchImg10 from './WatchlistImg/watch10.jpg';
 let userWatchList = [
     {
         id: 1,
+        uid: "ash_root_user",
         showImg: watchImg1,
         name: "Naruto",
         type: "Series",
@@ -24,6 +25,7 @@ let userWatchList = [
     },
     {
         id: 2,
+        uid: "ash_root_user",
         showImg: watchImg2,
         name: "Naruto",
         type: "Series",
@@ -35,6 +37,7 @@ let userWatchList = [
     },
     {
         id: 3,
+        uid: "ash_root_user",
         showImg: watchImg3,
         name: "Naruto",
         type: "Series",
@@ -46,6 +49,7 @@ let userWatchList = [
     },
     {
         id: 4,
+        uid: "ash_root_user",
         showImg: watchImg4,
         name: "Naruto",
         type: "Series",
@@ -57,6 +61,7 @@ let userWatchList = [
     },
     {
         id: 5,
+        uid: "ash_root_user",
         showImg: watchImg5,
         name: "Naruto",
         type: "Series",
@@ -68,6 +73,7 @@ let userWatchList = [
     },
     {
         id: 6,
+        uid: "ash_root_user",
         showImg: watchImg6,
         name: "Naruto",
         type: "Series",
@@ -79,6 +85,7 @@ let userWatchList = [
     },
     {
         id: 7,
+        uid: "ash_root_user",
         showImg: watchImg7,
         name: "Naruto",
         type: "Series",
@@ -90,6 +97,7 @@ let userWatchList = [
     },
     {
         id: 8,
+        uid: "ash_root_user",
         showImg: watchImg8,
         name: "Naruto",
         type: "Series",
@@ -101,6 +109,7 @@ let userWatchList = [
     },
     {
         id: 9,
+        uid: "ash_root_user",
         showImg: watchImg9,
         name: "Naruto",
         type: "Series",
@@ -112,6 +121,7 @@ let userWatchList = [
     },
     {
         id: 10,
+        uid: "ash_root_user",
         showImg: watchImg10,
         name: "Naruto",
         type: "Series",

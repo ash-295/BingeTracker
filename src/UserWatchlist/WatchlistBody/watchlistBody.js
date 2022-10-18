@@ -11,6 +11,7 @@ function WatchlistBody() {
     };
     return (
         <>
+            <h1 className='watchlist-heading'>My Watchlist</h1>
             <section className='series-container'>
                 <div className='nav-area'>
                     <div className={tabState === 1 ? 'tabs active-tab' : 'tabs'} onClick={() => toggleTab(1)}>

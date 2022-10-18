@@ -1,47 +1,12 @@
-.switch-area{
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.switch-area .switch{
-    background-color: brown;
-    width: 300px;
-    height: 50px;
-    display: inline;
-}
-
-.switch-area .switch input{
-    opacity: 0%;
-    height: 0%;
-    width: 0%;
-}
-
-.switch-area .switch .slider{
-    position: absolute;
-    cursor: pointer;
-    /* top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;  */
-    /* background-color: antiquewhite; */
-}
-
-.switch-area .switch .slider::before{
-    position: absolute;
-    height: 40px;
-    width: 140px;
-    content: "Movies";
-    background-color: blueviolet;
-    transition: 0.7s;
-}
-
-input:checked + .slider::before{
-    left: 140px;
-    content: "Series";
+.watchlist-heading{
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6em;
+    margin-top: 3%;
 }
 
 .series-container {
+    margin-top: 0%;
     width: 100%;
 }
 
@@ -69,6 +34,8 @@ input:checked + .slider::before{
 .series-container .content-area{
     width: 80%;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
 }
 
 .series-container .content-area .contents{

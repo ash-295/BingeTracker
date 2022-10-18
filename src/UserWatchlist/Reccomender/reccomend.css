@@ -1,0 +1,29 @@
+.reccomend_heading{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 3%;
+}
+
+.reccomend_container{
+    margin-top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reccomend_container .reccomend_content{
+    width: 72%;
+    color: #ffffff;
+    margin: 3% 0%;
+    background-color: #3b3b3b52;
+    padding: 3%;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.reccomend_container .reccomend_content .search_reccomend{
+    width: 94%;
+    padding: 1% 3%;
+    border-radius: 10px;
+}
