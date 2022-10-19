@@ -1,272 +1,271 @@
-import poster1 from './showPosters/post1.jpg';
-import poster2 from './showPosters/post2.jpg';
-import poster3 from './showPosters/post3.jpg';
-import poster4 from './showPosters/post4.jpg';
-import poster5 from './showPosters/post5.jpg';
-import poster6 from './showPosters/post6.jpg';
-import poster7 from './showPosters/post7.jpg';
-import poster8 from './showPosters/post8.jpg';
-import poster9 from './showPosters/post9.jpg';
-import poster10 from './showPosters/post10.jpg';
-import poster11 from './showPosters/post11.jpg';
-import poster12 from './showPosters/post12.jpg';
-import poster13 from './showPosters/post13.jpg';
-import poster14 from './showPosters/post14.jpg';
-import poster15 from './showPosters/post15.jpg';
-import poster16 from './showPosters/post16.jpg';
-import poster17 from './showPosters/post17.jpg';
-import poster18 from './showPosters/post18.jpg';
-import poster19 from './showPosters/post19.jpg';
-import poster20 from './showPosters/post20.jpg';
-import poster21 from './showPosters/post21.jpg';
-import poster22 from './showPosters/post22.jpg';
-import poster23 from './showPosters/post23.jpg';
-import poster24 from './showPosters/post24.jpg';
-import poster25 from './showPosters/post25.jpg';
-import poster26 from './showPosters/post26.jpg';
-import poster27 from './showPosters/post27.jpg';
-import poster28 from './showPosters/post28.jpg';
-import poster29 from './showPosters/post29.jpg';
-import poster30 from './showPosters/post30.jpg';
-
 let allShows = [
     {
         _id: "show_1",
         showName: "Naruto",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster1,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post1.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_2",
         showName: "Fullmetal Alchemist",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster2,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post2.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_3",
         showName: "Code Geass",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster3,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post3.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_4",
         showName: "Hunter X Hunter",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster4,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post4.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_5",
         showName: "Kuroko no Baske",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster5,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post5.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_6",
         showName: "Noragami",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster6,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post6.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_7",
         showName: "Gintama",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster7,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post7.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_8",
         showName: "Attack on Titan",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster8,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post8.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_9",
         showName: "That Time I got Re-incarnated as a Slime",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster9,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post9.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_10",
         showName: "Kaguaya Sama- Love is War",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster10,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post10.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_11",
         showName: "The Disastrous life of Saiki",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster11,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post11.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_12",
         showName: "Sword art Online",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster12,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post12.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_13",
         showName: "Boku no Hero Academia",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster13,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post13.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_14",
         showName: "Dragon Ball Super",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster14,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post14.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_15",
         showName: "Fruit Basket",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster15,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post15.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_16",
         showName: "Goblin Slayer",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster16,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post16.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_17",
         showName: "Jojo's Bizzare Adventure",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster17,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post17.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_18",
         showName: "Jujutsu Kaisen",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster18,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post18.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_19",
         showName: "Demon Slayer",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster19,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post19.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_20",
         showName: "One punch man",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster20,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post20.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_21",
         showName: "Re:Zero",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster21,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post21.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_22",
         showName: "Your lie in April",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster22,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post22.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_23",
         showName: "Shokugeki no Souma",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster23,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post23.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_24",
-        showName: "Naruto",
+        showName: "Tokyo Revengers",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster24,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post24.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_25",
-        showName: "Naruto",
+        showName: "Horimiya",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster25,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post25.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_26",
-        showName: "Naruto",
+        showName: "Promised Neverland",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster26,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post26.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_27",
-        showName: "Naruto",
+        showName: "Zanyou no Terror",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster27,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post27.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_28",
-        showName: "Naruto",
+        showName: "Rent a Girlfriend",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster28,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post28.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_29",
-        showName: "Naruto",
+        showName: "Ahiru no Sora",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster29,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post29.jpg",
         rating: 0,
         ratingCount: 0
     },
     {
         _id: "show_30",
-        showName: "Naruto",
+        showName: "Overlord",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         releasedAt: 10000000,
-        showPoster: poster30,
+        showPoster: "https://bingetracker.s3.ap-south-1.amazonaws.com/showsPoster/post30.jpg",
         rating: 0,
         ratingCount: 0
     },

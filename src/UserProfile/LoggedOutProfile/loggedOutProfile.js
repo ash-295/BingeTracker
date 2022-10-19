@@ -1,14 +1,11 @@
 import './loggedOutProfile.css';
-import google from './google-logo.png'
+import google from './google-logo.png';
 import { useState } from 'react';
 import auth, { provider } from '../../_connection/firebase';
 import { signInWithPopup, signOut } from 'firebase/auth';
 
 function LoggedOut() {
     const [sign, setSign] = useState(localStorage.getItem("UID"));
-    // const btn_change = () => {  
-    //     setSign(`Logout`)
-    // };
 
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider)

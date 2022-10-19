@@ -1,0 +1,49 @@
+.rec_card{
+    display: flex;
+}
+
+.rec_card .rec_img{
+    width: 40%;
+}
+
+.rec_card .rec_img img{
+    width: 100%;
+}
+
+.rec_card .rec_content{
+    width: 60%;
+    background-color: #000000;
+    padding: 2% 4%;
+    text-align: left;
+}
+
+.rec_card .rec_content h1{
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.rec_card .rec_content .rec_rating{
+    color: rgb(244, 232, 104);
+    font-size: 1.8rem;
+    margin-bottom: 4%;
+}
+
+.rec_card .rec_content .rec_rating svg{
+    margin-right: 10px;
+}
+
+.rec_card .rec_content .rec_btn button{
+    margin-top: 5%;
+    padding: 2% 8%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.rec_card .rec_content .rec_btn button:hover{
+    background-color: #424242;
+    color: #ffffff;
+}
