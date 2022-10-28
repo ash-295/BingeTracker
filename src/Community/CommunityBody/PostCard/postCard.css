@@ -28,7 +28,7 @@
 
 .postCard .post_img_area{
     width: 25rem;
-    height: 23rem;
+    height: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +65,7 @@
 
 .postCard .post_info_area .post_icon_area button:hover{
     color: #ff5252;
+    cursor: pointer;
 }
 
 .postCard .post_info_area .post_caption_area{

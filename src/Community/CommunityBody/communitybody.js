@@ -5,7 +5,7 @@ import postList from './PostCard/demoPostsList';
 function CommunityBody() {
   return (
     <>
-        <section>
+        <section className='community_posts'>
         {postList.map((eachPost) => {
             return(
                 <div className='post_area'>

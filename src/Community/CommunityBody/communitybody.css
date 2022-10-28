@@ -1,7 +1,8 @@
-section{
+.community_posts{
     padding-bottom: 5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 section .post_area{

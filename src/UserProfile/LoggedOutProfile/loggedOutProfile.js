@@ -61,7 +61,7 @@ function LoggedOut() {
     else{
         console.log("In 2");
         return (
-            <section>
+            <section className='user_profile_area'>
                 <div className='profile-card'>
                     <img src={localStorage.getItem("ProfilePic")} alt="profile-pic"/>
                     <div className='userdata'>
