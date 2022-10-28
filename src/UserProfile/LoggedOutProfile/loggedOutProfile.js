@@ -3,6 +3,7 @@ import google from './google-logo.png';
 import { useState } from 'react';
 import auth, { provider } from '../../_connection/firebase';
 import { signInWithPopup, signOut } from 'firebase/auth';
+import axios from 'axios';
 
 function LoggedOut() {
     const [sign, setSign] = useState(localStorage.getItem("UID"));
@@ -10,12 +11,23 @@ function LoggedOut() {
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider)
         .then((response1) => {
-            localStorage.setItem("UID", response1.user.uid);
-            localStorage.setItem("Email", response1.user.email);
-            localStorage.setItem("Verified", response1.user.emailVerified);
-            localStorage.setItem("Username", response1.user.displayName);
-            localStorage.setItem("ProfilePic", response1.user.photoURL);
-            setSign(localStorage.getItem("UID"));
+            axios.post('http://localhost:4400/api/v1/signIn', { 
+                uid: response1.user.uid, 
+                email: response1.user.email, 
+                userName: response1.user.displayName
+            })
+            .then((response2) => {
+                console.log("API response", response2);
+                localStorage.setItem("UID", response1.user.uid);
+                localStorage.setItem("Email", response1.user.email);
+                localStorage.setItem("Verified", response1.user.emailVerified);
+                localStorage.setItem("Username", response1.user.displayName);
+                localStorage.setItem("ProfilePic", response1.user.photoURL);
+                setSign(localStorage.getItem("UID"));
+            })
+            .catch((error2) => {
+                console.log("API Error", error2);
+            });
         })
         .catch((error1) => {
             console.log(error1);
@@ -57,9 +69,9 @@ function LoggedOut() {
                         <h4>{localStorage.getItem("Email")}</h4>
                     </div>
                 </div>
-                <div class="container">
-                    <button onClick={signOutfromApp} class="button login__submit">
-                        <span class="button__text">Logout</span>
+                <div className="container">
+                    <button onClick={signOutfromApp} className="button login__submit">
+                        <span className="button__text">Logout</span>
                     </button>
                 </div>
             </section>

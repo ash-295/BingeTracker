@@ -1,0 +1,17 @@
+[
+    {
+        "uid": "testUser101",
+        "showId": "6350e59efd73fa06634afc72",
+        "type": "Series",
+        "status": "PlanToWatch",
+        "episodeWatched": 0,
+        "rating": 4
+    },
+    {
+        "uid": "testUser101",
+        "showId": "6350e59efd73fa06fbbfjnfjn",
+        "type": "Movie",
+        "status": "Completed",
+        "rating": 5
+    }
+]

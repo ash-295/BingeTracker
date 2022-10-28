@@ -1,7 +1,7 @@
 import './watchlist.css';
 import Heading from '../NavHeader/heading';
 import WatchlistBody from './WatchlistBody/watchlistBody';
-import Reccomend from './Reccomender/reccomend';
+import Recommend from './Reccomender/reccomend';
 import { useNavigate } from "react-router-dom";
 
 function WatchlistPage() {
@@ -20,7 +20,7 @@ function WatchlistPage() {
     return(
       <>
         <Heading/>
-        <Reccomend/>
+        <Recommend/>
         <WatchlistBody/>
       </>
     );

@@ -146,7 +146,7 @@ let movieData = [
     {
         _id: 9,
         imgSrc: mov9,
-        name: "The wolf od wall street",
+        name: "The wolf of wall street",
         rating: 10
     },
     {

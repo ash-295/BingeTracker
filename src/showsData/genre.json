@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Action"
+    },
+    {
+        "name": "Adventure"
+    },
+    {
+        "name": "Fantasy"
+    },
+    {
+        "name": "Music"
+    },
+    {
+        "name": "Psychological"
+    },
+    {
+        "name": "Romance"
+    },
+    {
+        "name": "Sci-Fi"
+    },
+    {
+        "name": "Shounen"
+    },
+    {
+        "name": "Thriller"
+    },
+    {
+        "name": "Comedy"
+    },
+    {
+        "name": "Mystery"
+    },
+    {
+        "name": "Drama"
+    },
+    {
+        "name": "School"
+    },
+    {
+        "name": "Sports"
+    },
+    {
+        "name": "Parody"
+    },
+    {
+        "name": "Horror"
+    },
+    {
+        "name": "Time Travel"
+    },
+    {
+        "name": "Reincarnation"
+    },
+    {
+        "name": "Family"
+    },
+    {
+        "name": "Slice of Life"
+    }
+]
