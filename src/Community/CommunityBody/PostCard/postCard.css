@@ -1,0 +1,77 @@
+.postCard{
+    width: 25rem;
+    /* height: 35rem; */
+    background-color: rgba(72, 72, 72, 0.634);
+    display: flex;
+    flex-direction: column;
+}
+
+.postCard .post_head{
+    height: 60px;
+    color: #ffffff;
+    display: flex;
+    padding-left: 5%;
+    align-items: center;
+    border-bottom: 4px solid #ff5451;
+}
+
+.postCard .post_head img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.postCard .post_head h4{
+    font-size: 1.2em;
+    margin-left: 4%;
+}
+
+.postCard .post_img_area{
+    width: 25rem;
+    height: 23rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #ff5451;
+}
+
+.postCard .post_img_area img{
+    width: 100%;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    object-fit: contain;
+}
+
+.postCard .post_info_area{
+    padding: 4%;
+}
+
+.postCard .post_info_area .post_icon_area{
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+}
+
+.postCard .post_info_area .post_icon_area button{
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.postCard .post_info_area .post_icon_area span{
+    font-size: 1.5rem;
+}
+
+.postCard .post_info_area .post_icon_area button:hover{
+    color: #ff5252;
+}
+
+.postCard .post_info_area .post_caption_area{
+    color: #ffffff;
+    text-align: justify;
+}
+
+.postCard .post_info_area .post_caption_area .post_time{
+    text-align: end;
+}

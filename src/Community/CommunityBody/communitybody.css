@@ -1,0 +1,9 @@
+section{
+    padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .post_area{
+    margin: 2%;
+}
