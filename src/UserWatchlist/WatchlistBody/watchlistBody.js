@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './watchlistBody.css';
 import userWatchList from './userWatchlist';
 import SeriesCard from './seriesCard';
-import axios from 'axios';
+// import axios from 'axios';
 
 function WatchlistBody() {
     const [tabState, setTab] = useState(1);
