@@ -11,11 +11,49 @@ function RecCard(props) {
         <div className='rec_content'>
             <h1>{props.showName}</h1>
             <div className='rec_rating'>
-                <FontAwesomeIcon icon= {faStar} />
-                <FontAwesomeIcon icon= {faStar} />
-                <FontAwesomeIcon icon= {faStar} />
-                <FontAwesomeIcon icon= {faStar} />
-                <FontAwesomeIcon icon= {faStar} />
+                {(() => {
+                    switch (props.rating) {
+                    case 1:
+                        return <>
+                            <FontAwesomeIcon icon= {faStar} />
+                            <span>({props.ratingCount})</span>
+                        </>
+                    case 2:
+                        return <>
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <span>({props.ratingCount})</span>
+                        </>
+                    case 3:
+                        return <>
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <span>({props.ratingCount})</span>
+                        </>
+                    case 4:
+                        return <>
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <span>({props.ratingCount})</span>
+                        </>
+                    case 5:
+                        return <>
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <FontAwesomeIcon icon= {faStar} />
+                            <span>({props.ratingCount})</span>
+                        </>
+                    default:
+                        return <>
+                            <span>No Rating Yet</span>
+                        </>
+                    }
+                })()}
             </div>
             <div className='rec_desc'>{props.description}</div>
             <div className='rec_btn'>

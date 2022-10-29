@@ -1,6 +1,5 @@
 import './reccomend.css';
 import RecCard from './recCard';
-import allShows from '../../showsData/showsData';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { useState, useEffect } from 'react';
@@ -16,11 +15,9 @@ function Recommend() {
       }
     })
     .then((response1) => {
-      console.log("Checkpoint 1", response1);
       if(response1.status === 200 && response1.data.status === "success"){
         console.log("Checkpoint 2", response1.data.recommendations);
-        setrecommendedShows(recommendedShows => [...recommendedShows, response1.data.recommendations[0]]);
-        console.log("Checkpoint 3", recommendedShows);
+        setrecommendedShows(response1.data.recommendations);
       }
       else{
         setrecommendedShows([]);
@@ -35,6 +32,7 @@ function Recommend() {
     getRecommendations(localStorage.getItem("UID"));
   }, []);
 
+  console.log("Final Recommendation", recommendedShows);
   return (
     <>
       <section className='reccomend_container'>
@@ -45,12 +43,14 @@ function Recommend() {
           <div className='reccomend-shows'>
             <Carousel showThumbs={false} autoPlay= {true} infiniteLoop= {true}>
               {
-                allShows.map((eachRecShow) => {
+                recommendedShows.map((eachRecShow) => {
                   return(
                     <RecCard
+                      showid = {eachRecShow._id}
                       showName = {eachRecShow.showName}
                       showPoster = {eachRecShow.showPoster}
                       rating = {eachRecShow.rating}
+                      ratingCount = {eachRecShow.ratingCount}
                       description = {eachRecShow.description}
                     />
                   )

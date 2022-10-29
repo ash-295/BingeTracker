@@ -8,3 +8,23 @@
 section .post_area{
     margin: 2%;
 }
+
+.create_post{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 50px;
+    bottom: 50px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 3px #999;
+    background-color: #950200;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.create_post:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #950200;
+}

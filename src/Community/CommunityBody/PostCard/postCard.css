@@ -37,7 +37,7 @@
 
 .postCard .post_img_area img{
     width: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     height: 100%;
     object-fit: contain;
 }

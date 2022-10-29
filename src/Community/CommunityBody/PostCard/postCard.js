@@ -1,6 +1,4 @@
 import './postCard.css';
-import post01 from '../../PostsImg/post01.jpeg';
-import prof1 from '../../ProfileImg/pro1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment, faShare } from '@fortawesome/free-solid-svg-icons';
 
