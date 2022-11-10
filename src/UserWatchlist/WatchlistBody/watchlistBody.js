@@ -1,15 +1,42 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './watchlistBody.css';
-import userWatchList from './userWatchlist';
 import SeriesCard from './seriesCard';
-// import axios from 'axios';
+import axios from 'axios';
+import Loader from '../../Loader/loader';
 
 function WatchlistBody() {
     const [tabState, setTab] = useState(1);
+    const [isloading, setIsLoading] = useState(false);
+    const [userWatchList, setUserWatchList] = useState([]);
     
     const toggleTab = (tabIndex) => {
         setTab(tabIndex);
     };
+
+    const getWatchlists = (uid) => {
+        axios.get("http://localhost:4400/api/v1/userWatchlist", {
+          headers: {
+            uid: uid
+          }
+        })
+        .then((response1) => {
+          console.log("Here", response1.data.data);
+          setUserWatchList(response1.data.data);
+          setIsLoading(false);
+        })
+        .catch((error1) => {
+          console.log("Error", error1);
+          setIsLoading(false);
+        });
+      }
+
+    useEffect(() => {
+        setIsLoading(true);
+        const timer = setTimeout(() => {
+            getWatchlists(localStorage.getItem("UID"));
+          }, 1500);
+          return () => clearTimeout(timer);
+    }, []);
 
     return (
         <>
@@ -37,21 +64,21 @@ function WatchlistBody() {
                     {userWatchList.map((eachData) => {
                         return(
                             <SeriesCard
-                                showImg = {eachData.showImg}
-                                name = {eachData.name}
-                                watchedEpisode = {eachData.watchedEpisode}
+                                showImg = {eachData.showDetails[0].showPoster}
+                                name = {eachData.showDetails[0].showName}
+                                watchedEpisode = {eachData.episodesWatched}
                             />
                         )
                     })}
                     </div>
                     <div className={tabState === 2 ? 'contents active-content' : 'contents'}>
                     {userWatchList.map((eachData) => {
-                        if(eachData.showStatus === "Watching"){
+                        if(eachData.status === "Watching"){
                             return(
                                 <SeriesCard
-                                    showImg = {eachData.showImg}
-                                    name = {eachData.name}
-                                    watchedEpisode = {eachData.watchedEpisode}
+                                    showImg = {eachData.showDetails[0].showPoster}
+                                    name = {eachData.showDetails[0].showName}
+                                    watchedEpisode = {eachData.episodesWatched}
                                 />
                             )
                         }
@@ -59,12 +86,12 @@ function WatchlistBody() {
                     </div>
                     <div className={tabState === 3 ? 'contents active-content' : 'contents'}>
                     {userWatchList.map((eachData) => {
-                        if(eachData.showStatus === "Completed"){
+                        if(eachData.status === "Completed"){
                             return(
                                 <SeriesCard
-                                    showImg = {eachData.showImg}
-                                    name = {eachData.name}
-                                    watchedEpisode = {eachData.watchedEpisode}
+                                    showImg = {eachData.showDetails[0].showPoster}
+                                    name = {eachData.showDetails[0].showName}
+                                    watchedEpisode = {eachData.episodesWatched}
                                 />
                             )
                         }
@@ -72,12 +99,12 @@ function WatchlistBody() {
                     </div>
                     <div className={tabState === 4 ? 'contents active-content' : 'contents'}>
                     {userWatchList.map((eachData) => {
-                        if(eachData.showStatus === "Plan to Watch"){
+                        if(eachData.status === "PlanToWatch"){
                             return(
                                 <SeriesCard
-                                    showImg = {eachData.showImg}
-                                    name = {eachData.name}
-                                    watchedEpisode = {eachData.watchedEpisode}
+                                    showImg = {eachData.showDetails[0].showPoster}
+                                    name = {eachData.showDetails[0].showName}
+                                    watchedEpisode = {eachData.episodesWatched}
                                 />
                             )
                         }
@@ -85,12 +112,12 @@ function WatchlistBody() {
                     </div>
                     <div className={tabState === 5 ? 'contents active-content' : 'contents'}>
                     {userWatchList.map((eachData) => {
-                        if(eachData.showStatus === "Dropped"){
+                        if(eachData.status === "Dropped"){
                             return(
                                 <SeriesCard
-                                    showImg = {eachData.showImg}
+                                    showImg = {eachData.showDetails[0].showPoster}
                                     name = {eachData.name}
-                                    watchedEpisode = {eachData.watchedEpisode}
+                                    watchedEpisode = {eachData.episodesWatched}
                                 />
                             )
                         }
@@ -98,6 +125,13 @@ function WatchlistBody() {
                     </div>
                 </div>
             </section>
+            {(() => {
+                if(isloading){
+                    return(
+                        <Loader/>
+                    )
+                }
+            })()}
         </>
     );
 }

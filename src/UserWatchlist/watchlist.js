@@ -3,6 +3,7 @@ import Heading from '../NavHeader/heading';
 import WatchlistBody from './WatchlistBody/watchlistBody';
 import Recommend from './Reccomender/reccomend';
 import { useNavigate } from "react-router-dom";
+import Loader from '../Loader/loader';
 
 function WatchlistPage() {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ function WatchlistPage() {
         <Heading/>
         <Recommend/>
         <WatchlistBody/>
+        {/* <Loader/> */}
       </>
     );
   }

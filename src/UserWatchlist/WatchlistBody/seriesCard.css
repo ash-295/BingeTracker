@@ -14,13 +14,33 @@
 
 .watch-card .info-area{
     position: absolute;
-    width: 100%;
-    bottom: -25%;
+    width: 96%;
+    bottom: -28%;
     background-color: #000000d0;
     transition: 0.25s;
-    text-align: center;
+    /* text-align: center; */
     border-radius: 10px;
     padding-bottom: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.watch-card .info-area h3 {
+    text-align: center;
+}
+
+.watch-card .info-area h5 {
+    padding: 0% 5%;
+}
+
+.watch-card .info-area .watch_category {
+    text-align: center;
+    background-color: rgb(60, 15, 102);
+    padding: 2% 4%;
+    width: 90px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0% 0% 0% 2%;
 }
 
 .watch-card:hover{
@@ -31,16 +51,64 @@
     bottom: 0%;
 }
 
-.watch-card .info-area button{
+/* .watch-card .info-area button{
     background-color: #7c210a;
     color: #ffffff;
     padding: 2% 8%;
     border-radius: 10px;
     font-weight: 700;
-
+    border: none;
 }
 
 .watch-card .info-area button:hover{
     background-color: #ffffff;
     color: #7c210a;
+    cursor: pointer;
+    border: none;
+} */
+
+.watch-card .info-area .watch_info_btn{
+    background: none;
+    color: #ffffff;
+    font-size: 25px;
+    display: inline;
+    float: right;
+    border: none;
 }
+
+.watch-card .info-area .watch_info_btn:hover{
+    color: #707070;
+    cursor: pointer;
+}
+
+.watch-card .info-area .watch_progress_area {
+    padding-left: 3%;
+    margin-top: 2%;
+    width: 97%;
+}
+
+.watch-card .info-area .watch_progress_area .watch_total_progress{
+    width: 8rem;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.watch-card .info-area .watch_progress_area .watch_total_progress .watch_current_progress{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(127, 255, 212);
+    border-radius: 10px;
+}
+
+.watch-card .info-area .watch_progress_area .watch_progess_numbers{
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.watch-card .info-area .watch_user_rating{
+    margin-top: 2%;
+    padding-left: 3%;
+}
+

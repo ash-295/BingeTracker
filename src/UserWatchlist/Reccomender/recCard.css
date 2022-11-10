@@ -33,6 +33,10 @@
     margin-right: 10px;
 }
 
+.rec_card .rec_content .rec_desc {
+    font-size: 0.8rem;
+}
+
 .rec_card .rec_content .rec_btn button{
     margin-top: 5%;
     padding: 2% 8%;

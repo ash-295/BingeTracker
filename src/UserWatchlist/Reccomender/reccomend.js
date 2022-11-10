@@ -16,7 +16,6 @@ function Recommend() {
     })
     .then((response1) => {
       if(response1.status === 200 && response1.data.status === "success"){
-        console.log("Checkpoint 2", response1.data.recommendations);
         setrecommendedShows(response1.data.recommendations);
       }
       else{
@@ -31,8 +30,6 @@ function Recommend() {
   useEffect(() => {
     getRecommendations(localStorage.getItem("UID"));
   }, []);
-
-  console.log("Final Recommendation", recommendedShows);
   return (
     <>
       <section className='reccomend_container'>
