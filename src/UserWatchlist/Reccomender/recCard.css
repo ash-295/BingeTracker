@@ -51,3 +51,33 @@
     background-color: #424242;
     color: #ffffff;
 }
+
+.rec_confirmation_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rec_confirmation_area .rec_confirmation_card {
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 2%;
+    display: flex;
+}
+
+.rec_confirmation_area .rec_confirmation_card .rec_confirm_inner {
+    border-left: 3px solid #a1f86b;
+    padding: 0% 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rec_confirmation_area .rec_confirmation_card .rec_confirm_inner .rec_confirm_icon {
+    color: #a1f86b;
+    font-size: 2rem;
+}
+
+.rec_confirmation_area .rec_confirmation_card .rec_confirm_inner h2 {
+    font-size: 1.5rem;
+}

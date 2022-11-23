@@ -34,11 +34,11 @@ function Recommend() {
     <>
       <section className='reccomend_container'>
         <div className='reccomend_content'>
-          <input className='search_reccomend' type="text" placeholder='Search shows here'/>
+          {/* <input className='search_reccomend' type="text" placeholder='Search shows here'/> */}
           <div className='search_results'></div>
           <h3>Our Recommendations</h3>
           <div className='reccomend-shows'>
-            <Carousel showThumbs={false} autoPlay= {true} infiniteLoop= {true}>
+            <Carousel autoPlay= {true} infiniteLoop= {true} interval= {10000}>
               {
                 recommendedShows.map((eachRecShow) => {
                   return(

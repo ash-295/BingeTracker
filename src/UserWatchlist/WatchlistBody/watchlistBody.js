@@ -67,6 +67,12 @@ function WatchlistBody() {
                                 showImg = {eachData.showDetails[0].showPoster}
                                 name = {eachData.showDetails[0].showName}
                                 watchedEpisode = {eachData.episodesWatched}
+                                statusType = {eachData.status}
+                                addTime = {eachData.addedToList}
+                                lastUpdateTime = {eachData.lastUpdatedTime}
+                                showId = {eachData.showId}
+                                totalEpisode = {eachData.showDetails[0].episode}
+                                completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
                             />
                         )
                     })}
@@ -79,8 +85,17 @@ function WatchlistBody() {
                                     showImg = {eachData.showDetails[0].showPoster}
                                     name = {eachData.showDetails[0].showName}
                                     watchedEpisode = {eachData.episodesWatched}
+                                    statusType = {eachData.status}
+                                    addTime = {eachData.addedToList}
+                                    lastUpdateTime = {eachData.lastUpdatedTime}
+                                    showId = {eachData.showId}
+                                    totalEpisode = {eachData.showDetails[0].episode}
+                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
                                 />
                             )
+                        }
+                        else{
+                            return( <></>)
                         }
                     })}
                     </div>
@@ -92,8 +107,17 @@ function WatchlistBody() {
                                     showImg = {eachData.showDetails[0].showPoster}
                                     name = {eachData.showDetails[0].showName}
                                     watchedEpisode = {eachData.episodesWatched}
+                                    statusType = {eachData.status}
+                                    addTime = {eachData.addedToList}
+                                    lastUpdateTime = {eachData.lastUpdatedTime}
+                                    showId = {eachData.showId}
+                                    totalEpisode = {eachData.showDetails[0].episode}
+                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
                                 />
                             )
+                        }
+                        else{
+                            return( <></>)
                         }
                     })}
                     </div>
@@ -105,21 +129,40 @@ function WatchlistBody() {
                                     showImg = {eachData.showDetails[0].showPoster}
                                     name = {eachData.showDetails[0].showName}
                                     watchedEpisode = {eachData.episodesWatched}
+                                    statusType = {eachData.status}
+                                    addTime = {eachData.addedToList}
+                                    lastUpdateTime = {eachData.lastUpdatedTime}
+                                    showId = {eachData.showId}
+                                    totalEpisode = {eachData.showDetails[0].episode}
+                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
                                 />
                             )
+                        }
+                        else{
+                            return( <></>)
                         }
                     })}
                     </div>
                     <div className={tabState === 5 ? 'contents active-content' : 'contents'}>
+                    Coming Soon...
                     {userWatchList.map((eachData) => {
                         if(eachData.status === "Dropped"){
                             return(
                                 <SeriesCard
                                     showImg = {eachData.showDetails[0].showPoster}
-                                    name = {eachData.name}
+                                    name = {eachData.showDetails[0].showName}
                                     watchedEpisode = {eachData.episodesWatched}
+                                    statusType = {eachData.status}
+                                    addTime = {eachData.addedToList}
+                                    lastUpdateTime = {eachData.lastUpdatedTime}
+                                    showId = {eachData.showId}
+                                    totalEpisode = {eachData.showDetails[0].episode}
+                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
                                 />
                             )
+                        }
+                        else{
+                            return( <></>)
                         }
                     })}
                     </div>
