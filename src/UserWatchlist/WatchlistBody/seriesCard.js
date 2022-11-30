@@ -43,7 +43,7 @@ function SeriesCard(props) {
 
   const incrementEpisode = (showId) => {
     let userUid = localStorage.getItem("UID");
-    axios.post("http://localhost:4400/api/v1/updateWatchlist", {
+    axios.post("http://13.126.46.242:4400/api/v1/updateWatchlist", {
       uid: userUid,
       showId: showId,
       type: "plusOne"

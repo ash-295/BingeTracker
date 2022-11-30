@@ -9,7 +9,7 @@ function Recommend() {
   const [recommendedShows, setrecommendedShows] = useState([]);
 
   const getRecommendations = (uid) => {
-    axios.get("http://localhost:4400/api/v1/reccomendations", {
+    axios.get("http://13.126.46.242:4400/api/v1/reccomendations", {
       headers: {
         uid: uid
       }
