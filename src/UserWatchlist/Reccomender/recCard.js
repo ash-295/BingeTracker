@@ -10,7 +10,7 @@ function RecCard(props) {
 
     const addShowforUser = (showid) => {
         let userUid = localStorage.getItem("UID"); 
-        axios.post("http://13.126.46.242:4400/api/v1/addShowToWatchlist", {
+        axios.post("https://api.akashjena.site/api/v1/addShowToWatchlist", {
             uid: userUid,
             showId: showid
         })

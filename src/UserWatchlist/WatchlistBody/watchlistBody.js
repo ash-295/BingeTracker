@@ -14,7 +14,7 @@ function WatchlistBody() {
     };
 
     const getWatchlists = (uid) => {
-        axios.get("http://13.126.46.242:4400/api/v1/userWatchlist", {
+        axios.get("https://api.akashjena.site/api/v1/userWatchlist", {
           headers: {
             uid: uid
           }

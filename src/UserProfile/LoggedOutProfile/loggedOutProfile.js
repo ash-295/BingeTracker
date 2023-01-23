@@ -11,7 +11,7 @@ function LoggedOut() {
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider)
         .then((response1) => {
-            axios.post('http://13.126.46.242:4400/api/v1/signIn', { 
+            axios.post('https://api.akashjena.site/api/v1/signIn', { 
                 uid: response1.user.uid, 
                 email: response1.user.email, 
                 userName: response1.user.displayName
