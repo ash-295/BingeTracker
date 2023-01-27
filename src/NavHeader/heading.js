@@ -1,4 +1,5 @@
 import './heading.css';
+import logo from './popcorn.png';
 import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from 'react';
@@ -11,7 +12,8 @@ function Heading() {
     <>
       <div className='heading-area'>
         <div className='brand'>
-          <h1>Entertainment Tracker</h1>
+          <img src={logo} alt=''></img>
+          <h1>BingeTracker</h1>
         </div>
         <div className='hamburger-menu'>
             <a href='#' className='hamburger-icon' onClick={() => setMenuOpen(!menuOpen)}>

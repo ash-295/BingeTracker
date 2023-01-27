@@ -45,7 +45,6 @@ function LoggedOut() {
             console.log(error);
           });
     }
-    console.log("checkpoint", typeof sign);
     if(sign === "" || sign === null || sign === undefined){
         console.log("In 1");
         return (

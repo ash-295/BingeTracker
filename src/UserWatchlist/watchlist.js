@@ -11,9 +11,11 @@ function WatchlistPage() {
     return(
       <>
         <Heading/>
-        <button onClick={() => navigate("/profile")} class="button login__submit" style={{width: "100%"}}>
-          <span class="button__text">Go to Login</span>
-        </button>
+        <div class="container">
+          <button onClick={() => navigate("/profile")} class="button login__submit" style={{width: "300px"}}>
+            <span class="button__text">Go to Login</span>
+          </button>
+        </div>
       </>
     );
   }
