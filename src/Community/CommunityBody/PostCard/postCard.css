@@ -76,3 +76,14 @@
 .postCard .post_info_area .post_caption_area .post_time{
     text-align: end;
 }
+
+@media (max-width: 500px) {
+    .postCard {
+        width: 20rem;
+    }
+
+    .postCard .post_img_area {
+        width: 20rem;
+        height: 20rem;
+    }
+}

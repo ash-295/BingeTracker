@@ -23,7 +23,10 @@ function Heading() {
         <div className={menuOpen ? 'menu mobile-menu' : 'menu'}>
           <ul>
             <li>
-              <NavLink to='/home'>Trending Now</NavLink>
+              <NavLink to='/home'>Trending</NavLink>
+            </li>
+            <li>
+              <NavLink to='/explore'>Explore</NavLink>
             </li>
             <li>
               <NavLink to='/watchlist'>My Watchlist</NavLink>

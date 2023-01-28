@@ -4,7 +4,7 @@
 }
 
 .card .img-area{
-    border-bottom: 3px solid rgb(228, 64, 64);
+    border-bottom: 3px solid #e44040;
 }
 .card .img-area img{ 
     /* user-select: none;

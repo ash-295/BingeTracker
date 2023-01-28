@@ -1,0 +1,87 @@
+.explore_search_area {
+    padding: 2% 6%;
+}
+
+.explore_search_area .explore_search_query_area {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.explore_search_area .explore_search_query_area .explore_search_query_input {
+    width: 60%;
+    border-radius: 30px;
+    padding: 1.2% 3%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: #3b3b3b52;
+    color: #ffffff;
+}
+
+.explore_search_area .explore_search_query_area button {
+    width: 10%;
+    margin-left: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.explore_search_area .explore_search_query_area button:hover {
+    background-color: #862121;
+    color: #ffffff;
+}
+
+.explore_search_area .explore_search_query_area .explore_search_query_submit {
+    background-color: #862121;
+    color: #ffffff;
+}
+
+.explore_search_area .explore_search_query_area .explore_search_query_submit:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.explore_search_area .explore_search_query_area button svg {
+    margin-left: 5%;
+}
+
+@media (max-width: 945px) {
+    .explore_search_area .explore_search_query_area button {
+        width: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+    .explore_search_area .explore_search_query_area {
+        display: block;
+    }
+    .explore_search_area .explore_search_query_area .explore_search_query_input {
+        width: 92%;
+        padding: 2% 4%;
+        margin-bottom: 10px;
+    }
+    .explore_search_area .explore_search_query_area button {
+        width: 29%;
+        padding: 2% 4%;
+    }
+}
+
+@media (max-width: 440px) {
+    .explore_search_area .explore_search_query_area {
+        display: flex;
+        flex-direction: column;
+    }
+    .explore_search_area .explore_search_query_area .explore_search_query_input {
+        padding: 3% 5%;
+        margin-bottom: 10px;
+    }
+    .explore_search_area .explore_search_query_area button {
+        width: 92%;
+        padding: 2% 4%;
+        margin-bottom: 10px;
+    }
+}

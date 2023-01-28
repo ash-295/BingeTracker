@@ -6,8 +6,8 @@ function DiscussPage() {
   return (
     <>
       <Heading/>
-      <div className='comingSoon'>Coming Soon...</div>
-      {/* <CommunityBody/> */}
+      {/* <div className='comingSoon'>Coming Soon...</div> */}
+      <CommunityBody/>
     </>
   );
 }
