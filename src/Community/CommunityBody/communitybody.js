@@ -17,7 +17,7 @@ function CommunityBody() {
                             createdAt = {eachPost.createdAt}
                             postImage = {eachPost.postImage}
                             likeCount = {eachPost.likeCount}
-                            commentCount =  {eachPost.commentCount}
+                            commentCount = {eachPost.commentCount}
                             shareCount = {eachPost.shareCount}
                             userliked = {eachPost.userliked}
                             caption = {eachPost.caption}

@@ -1,9 +1,7 @@
 import './watchlist.css';
 import Heading from '../NavHeader/heading';
 import WatchlistBody from './WatchlistBody/watchlistBody';
-import Recommend from './Reccomender/reccomend';
 import { useNavigate } from "react-router-dom";
-import Loader from '../Loader/loader';
 
 function WatchlistPage() {
   const navigate = useNavigate();
@@ -11,9 +9,9 @@ function WatchlistPage() {
     return(
       <>
         <Heading/>
-        <div class="container">
-          <button onClick={() => navigate("/profile")} class="button login__submit" style={{width: "300px"}}>
-            <span class="button__text">Go to Login</span>
+        <div className="container">
+          <button onClick={() => navigate("/profile")} className="button login__submit" style={{width: "300px"}}>
+            <span className="button__text">Go to Login</span>
           </button>
         </div>
       </>
@@ -23,9 +21,7 @@ function WatchlistPage() {
     return(
       <>
         <Heading/>
-        <Recommend/>
         <WatchlistBody/>
-        {/* <Loader/> */}
       </>
     );
   }

@@ -49,9 +49,9 @@ function LoggedOut() {
         console.log("In 1");
         return (
             <section>
-                <div class="container">
-                    <button onClick={signInWithGoogle} class="button login__submit">
-                        <span class="button__text">Sign In with <img src={google} alt='Google'/></span>
+                <div className="container">
+                    <button onClick={signInWithGoogle} className="button login__submit">
+                        <span className="button__text">Sign In with <img src={google} alt='Google'/></span>
                     </button>
                 </div>
             </section>

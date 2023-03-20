@@ -8,39 +8,39 @@ function WatchlistBody() {
     const [tabState, setTab] = useState(1);
     const [isloading, setIsLoading] = useState(false);
     const [userWatchList, setUserWatchList] = useState([]);
-    
+
     const toggleTab = (tabIndex) => {
         setTab(tabIndex);
     };
 
     const getWatchlists = (uid) => {
         axios.get("https://api.akashjena.site/api/v1/userWatchlist", {
-          headers: {
-            uid: uid
-          }
+            headers: {
+                uid: uid
+            }
         })
-        .then((response1) => {
-          console.log("Here", response1.data.data);
-          setUserWatchList(response1.data.data);
-          setIsLoading(false);
-        })
-        .catch((error1) => {
-          console.log("Error", error1);
-          setIsLoading(false);
-        });
-      }
+            .then((response1) => {
+                console.log("Here", response1.data.data);
+                setUserWatchList(response1.data.data);
+                setIsLoading(false);
+            })
+            .catch((error1) => {
+                console.log("Error", error1);
+                setIsLoading(false);
+            });
+    }
 
     useEffect(() => {
         setIsLoading(true);
         const timer = setTimeout(() => {
             getWatchlists(localStorage.getItem("UID"));
-          }, 1500);
-          return () => clearTimeout(timer);
+        }, 1500);
+        return () => clearTimeout(timer);
     }, []);
 
     return (
         <>
-            <h1 className='watchlist-heading'>My Watchlist</h1>
+            {/* <h1 className='watchlist-heading'>My Watchlist</h1> */}
             <section className='series-container'>
                 <div className='nav-area'>
                     <div className={tabState === 1 ? 'tabs active-tab' : 'tabs'} onClick={() => toggleTab(1)}>
@@ -61,117 +61,117 @@ function WatchlistBody() {
                 </div>
                 <div className='content-area'>
                     <div className={tabState === 1 ? 'contents active-content' : 'contents'}>
-                    {userWatchList.map((eachData) => {
-                        return(
-                            <SeriesCard
-                                showImg = {eachData.showDetails[0].showPoster}
-                                name = {eachData.showDetails[0].showName}
-                                watchedEpisode = {eachData.episodesWatched}
-                                statusType = {eachData.status}
-                                addTime = {eachData.addedToList}
-                                lastUpdateTime = {eachData.lastUpdatedTime}
-                                showId = {eachData.showId}
-                                totalEpisode = {eachData.showDetails[0].episode}
-                                completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
-                            />
-                        )
-                    })}
+                        {userWatchList.map((eachData) => {
+                            return (
+                                <SeriesCard
+                                    showImg={eachData.showDetails[0].showPoster}
+                                    name={eachData.showDetails[0].showName}
+                                    watchedEpisode={eachData.episodesWatched}
+                                    statusType={eachData.status}
+                                    addTime={eachData.addedToList}
+                                    lastUpdateTime={eachData.lastUpdatedTime}
+                                    showId={eachData.showId}
+                                    totalEpisode={eachData.showDetails[0].episode}
+                                    completionPercentage={(eachData.episodesWatched / eachData.showDetails[0].episode) * 100}
+                                />
+                            )
+                        })}
                     </div>
                     <div className={tabState === 2 ? 'contents active-content' : 'contents'}>
-                    {userWatchList.map((eachData) => {
-                        if(eachData.status === "Watching"){
-                            return(
-                                <SeriesCard
-                                    showImg = {eachData.showDetails[0].showPoster}
-                                    name = {eachData.showDetails[0].showName}
-                                    watchedEpisode = {eachData.episodesWatched}
-                                    statusType = {eachData.status}
-                                    addTime = {eachData.addedToList}
-                                    lastUpdateTime = {eachData.lastUpdatedTime}
-                                    showId = {eachData.showId}
-                                    totalEpisode = {eachData.showDetails[0].episode}
-                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
-                                />
-                            )
-                        }
-                        else{
-                            return( <></>)
-                        }
-                    })}
+                        {userWatchList.map((eachData) => {
+                            if (eachData.status === "Watching") {
+                                return (
+                                    <SeriesCard
+                                        showImg={eachData.showDetails[0].showPoster}
+                                        name={eachData.showDetails[0].showName}
+                                        watchedEpisode={eachData.episodesWatched}
+                                        statusType={eachData.status}
+                                        addTime={eachData.addedToList}
+                                        lastUpdateTime={eachData.lastUpdatedTime}
+                                        showId={eachData.showId}
+                                        totalEpisode={eachData.showDetails[0].episode}
+                                        completionPercentage={(eachData.episodesWatched / eachData.showDetails[0].episode) * 100}
+                                    />
+                                )
+                            }
+                            else {
+                                return (<></>)
+                            }
+                        })}
                     </div>
                     <div className={tabState === 3 ? 'contents active-content' : 'contents'}>
-                    {userWatchList.map((eachData) => {
-                        if(eachData.status === "Completed"){
-                            return(
-                                <SeriesCard
-                                    showImg = {eachData.showDetails[0].showPoster}
-                                    name = {eachData.showDetails[0].showName}
-                                    watchedEpisode = {eachData.episodesWatched}
-                                    statusType = {eachData.status}
-                                    addTime = {eachData.addedToList}
-                                    lastUpdateTime = {eachData.lastUpdatedTime}
-                                    showId = {eachData.showId}
-                                    totalEpisode = {eachData.showDetails[0].episode}
-                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
-                                />
-                            )
-                        }
-                        else{
-                            return( <></>)
-                        }
-                    })}
+                        {userWatchList.map((eachData) => {
+                            if (eachData.status === "Completed") {
+                                return (
+                                    <SeriesCard
+                                        showImg={eachData.showDetails[0].showPoster}
+                                        name={eachData.showDetails[0].showName}
+                                        watchedEpisode={eachData.episodesWatched}
+                                        statusType={eachData.status}
+                                        addTime={eachData.addedToList}
+                                        lastUpdateTime={eachData.lastUpdatedTime}
+                                        showId={eachData.showId}
+                                        totalEpisode={eachData.showDetails[0].episode}
+                                        completionPercentage={(eachData.episodesWatched / eachData.showDetails[0].episode) * 100}
+                                    />
+                                )
+                            }
+                            else {
+                                return (<></>)
+                            }
+                        })}
                     </div>
                     <div className={tabState === 4 ? 'contents active-content' : 'contents'}>
-                    {userWatchList.map((eachData) => {
-                        if(eachData.status === "PlanToWatch"){
-                            return(
-                                <SeriesCard
-                                    showImg = {eachData.showDetails[0].showPoster}
-                                    name = {eachData.showDetails[0].showName}
-                                    watchedEpisode = {eachData.episodesWatched}
-                                    statusType = {eachData.status}
-                                    addTime = {eachData.addedToList}
-                                    lastUpdateTime = {eachData.lastUpdatedTime}
-                                    showId = {eachData.showId}
-                                    totalEpisode = {eachData.showDetails[0].episode}
-                                    completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
-                                />
-                            )
-                        }
-                        else{
-                            return( <></>)
-                        }
-                    })}
+                        {userWatchList.map((eachData) => {
+                            if (eachData.status === "PlanToWatch") {
+                                return (
+                                    <SeriesCard
+                                        showImg={eachData.showDetails[0].showPoster}
+                                        name={eachData.showDetails[0].showName}
+                                        watchedEpisode={eachData.episodesWatched}
+                                        statusType={eachData.status}
+                                        addTime={eachData.addedToList}
+                                        lastUpdateTime={eachData.lastUpdatedTime}
+                                        showId={eachData.showId}
+                                        totalEpisode={eachData.showDetails[0].episode}
+                                        completionPercentage={(eachData.episodesWatched / eachData.showDetails[0].episode) * 100}
+                                    />
+                                )
+                            }
+                            else {
+                                return (<></>)
+                            }
+                        })}
                     </div>
                     <div className={tabState === 5 ? 'contents active-content' : 'contents'}>
                         Coming Soon...
                         {userWatchList.map((eachData) => {
-                            if(eachData.status === "Dropped"){
-                                return(
+                            if (eachData.status === "Dropped") {
+                                return (
                                     <SeriesCard
-                                        showImg = {eachData.showDetails[0].showPoster}
-                                        name = {eachData.showDetails[0].showName}
-                                        watchedEpisode = {eachData.episodesWatched}
-                                        statusType = {eachData.status}
-                                        addTime = {eachData.addedToList}
-                                        lastUpdateTime = {eachData.lastUpdatedTime}
-                                        showId = {eachData.showId}
-                                        totalEpisode = {eachData.showDetails[0].episode}
-                                        completionPercentage = {(eachData.episodesWatched/eachData.showDetails[0].episode)*100}
+                                        showImg={eachData.showDetails[0].showPoster}
+                                        name={eachData.showDetails[0].showName}
+                                        watchedEpisode={eachData.episodesWatched}
+                                        statusType={eachData.status}
+                                        addTime={eachData.addedToList}
+                                        lastUpdateTime={eachData.lastUpdatedTime}
+                                        showId={eachData.showId}
+                                        totalEpisode={eachData.showDetails[0].episode}
+                                        completionPercentage={(eachData.episodesWatched / eachData.showDetails[0].episode) * 100}
                                     />
                                 )
                             }
-                            else{
-                                return( <></>)
+                            else {
+                                return (<></>)
                             }
                         })}
                     </div>
                 </div>
             </section>
             {(() => {
-                if(isloading){
-                    return(
-                        <Loader/>
+                if (isloading) {
+                    return (
+                        <Loader />
                     )
                 }
             })()}

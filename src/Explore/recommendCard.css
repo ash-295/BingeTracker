@@ -1,0 +1,228 @@
+.explore_rec_card {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+
+.explore_rec_card .explore_rec_card_poster_area {
+    width: 200rem;
+    height: 100%;
+}
+
+.explore_rec_card .explore_rec_card_poster_area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.explore_rec_card .explore_rec_card_content_marea {
+    font-style: italic;
+    display: none;
+}
+
+.explore_rec_card .explore_rec_card_content_marea h1 {
+    cursor: pointer;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_heading {
+    font-size: 2.2rem;
+    margin-bottom: 1%;
+    color: #ffdc2f;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_rating {
+    padding-bottom: 2%;
+    color: #ffdc2f;
+    font-size: 1.3rem;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_rating svg {
+    margin-right: 4px;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_rating span {
+    margin-left: 10px;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_btn_area {
+    width: 100%;
+    text-align: right;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_btn_area .explore_rec_card_content_btn {
+    padding: 2% 6%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    margin-top: 5px;
+    border: none;
+}
+
+.explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_btn_area .explore_rec_card_content_btn:hover {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+.explore_rec_card .explore_rec_card_content_area {
+    padding: 1% 5%;
+    background-color: #000000;
+    text-align: left;
+}
+
+.explore_rec_card .explore_rec_card_content_area h1 {
+    cursor: pointer;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_heading {
+    font-size: 2.2rem;
+    margin-bottom: 1%;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_rating {
+    padding-bottom: 2%;
+    color: #ffdc2f;
+    font-size: 1.3rem;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_rating svg {
+    margin-right: 4px;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_rating span {
+    margin-left: 10px;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_description {
+    font-size: 0.9rem;
+    margin-bottom: 1%;
+    font-style: italic;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_btn_area .explore_rec_card_content_btn {
+    padding: 2% 6%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    margin-top: 5px;
+    border: none;
+}
+
+.explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_btn_area .explore_rec_card_content_btn:hover {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    .explore_rec_card .explore_rec_card_content_area {
+        display: none;
+    }
+
+    .explore_rec_card .explore_rec_card_content_marea {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        padding: 10%;
+        position: absolute;
+        background: linear-gradient(140deg, #00000000, #00000094, #000000 80%);
+    }
+}
+
+@media (max-width: 480px) {
+    .explore_rec_card .explore_rec_card_content_marea {
+        align-items: center;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    .explore_rec_card .explore_rec_card_content_marea .explore_rec_card_content_btn_area {
+        text-align: center;
+    }
+}
+
+/* @media (max-width: 950px) {
+    .explore_rec_card{
+        height: 60vh;
+    }
+    
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_heading {
+        font-size: 1.5rem;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_rating {
+        padding-bottom: 2%;
+        font-size: 1rem;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_description {
+        font-size: 0.7rem;
+        margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 650px) {
+    .explore_rec_card{
+        height: 45vh;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_heading {
+        font-size: 1rem;
+        margin-bottom: 1%;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_rating {
+        padding-bottom: 2%;
+        font-size: 0.5rem;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_description {
+        font-size: 0.5rem;
+        margin-bottom: 1%;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_btn_area .explore_rec_card_content_btn {
+        padding: 2% 6%;
+        font-size: 0.8rem;
+        font-weight: 400;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 450px) {
+    .explore_rec_card{
+        height: 25vh;
+    }
+
+    .explore_rec_card .explore_rec_card_poster_area {
+        width: 90rem;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_heading {
+        font-size: 0.8rem;
+        margin-bottom: 1%;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_rating {
+        padding-bottom: 2%;
+        font-size: 0.4rem;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_description {
+        font-size: 0.3rem;
+        margin-bottom: 1%;
+    }
+
+    .explore_rec_card .explore_rec_card_content_area .explore_rec_card_content_btn_area .explore_rec_card_content_btn {
+        padding: 1% 5%;
+        font-size: 0.5rem;
+        font-weight: 400;
+        border-radius: 2px;
+    }
+} */

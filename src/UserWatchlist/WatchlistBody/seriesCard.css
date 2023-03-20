@@ -26,6 +26,7 @@
 
 .watch-card .info-area h3 {
     text-align: center;
+    cursor: pointer;
 }
 
 .watch-card .info-area h5 {

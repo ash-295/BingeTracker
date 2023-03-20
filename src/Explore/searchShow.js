@@ -13,7 +13,9 @@ function SearchShow() {
                     <button className='explore_search_query_submit'>Apply</button>
                 </div>
                 <div className='explore_search_result_area'></div>
+                {/* <hr/> */}
             </div>
+            <hr/>
         </>
     );
 }

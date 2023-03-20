@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo, faStar, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function SeriesCard(props) {
+  const navigate = useNavigate();
   let categoryColor = "#400000";
 
   const [currentEpisode, setcurrentEpisode] = useState(props.watchedEpisode);
@@ -71,9 +73,9 @@ function SeriesCard(props) {
       <div id={"watch_" + props.statusType + "_" + props.showId} className='watch-card'>
         <img src={props.showImg} alt='watchShow' />
         <div className='info-area'>
-          <h3>{props.name}</h3>
+          <h3 onClick={() => navigate("/watchlist/show/" + props.showId)} >{props.name}</h3>
           <h5 className='watch_category' style={{ backgroundColor: categoryColor }}>{props.statusType}</h5>
-          <button className='watch_info_btn'><FontAwesomeIcon icon={faCircleInfo} /></button>
+          <button onClick={() => navigate("/watchlist/show/" + props.showId)} className='watch_info_btn'><FontAwesomeIcon icon={faCircleInfo} /></button>
           <div className='watch_progress_area'>
             <div className='watch_total_progress'>
               <div className='watch_current_progress' style={{ width: progress + "%" }}>
