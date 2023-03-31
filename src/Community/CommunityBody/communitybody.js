@@ -12,6 +12,7 @@ function CommunityBody() {
                 return(
                     <div className='post_area'>
                         <PostCard
+                            key = {eachPost.profileName}
                             profilePic = {eachPost.profilePic}
                             profileName = {eachPost.profileName}
                             createdAt = {eachPost.createdAt}

@@ -2,7 +2,7 @@ import './showpage.css';
 import Heading from '../NavHeader/heading';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faBookmark, faPlus } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Loader from '../Loader/loader';
@@ -11,29 +11,123 @@ import { availability } from '../_StaticData/available';
 function ShowPage() {
     const { showid } = useParams();
     const [showData, setShowData] = useState({})
+    const [watchData, setWatchData] = useState({})
+    const [percent, setPercent] = useState('100%');
     const [isloading, setIsLoading] = useState(false);
-    const [inWatchlist, setInWatchlist] = useState(true);
+    const [inWatchlist, setInWatchlist] = useState(false);
+    const [incrementBtn, setIncrementBtn] = useState(true)
+    const uid = localStorage.getItem("UID")
 
-    const getShowInfo = (showid) => {
+    const getShowInfoWithoutUid = (showid) => {
         axios.post("https://api.akashjena.site/api/v1/getShowInfo", {
             showId: showid
         })
             .then((response1) => {
-                console.log("Here", response1);
-                setShowData(response1.data.data);
+                console.log("Here", response1.data);
+                setShowData(response1.data.showData);
                 setIsLoading(false)
             })
             .catch((error1) => {
-                console.log("Error", error1);
+                // console.log("Error", error1);
+            });
+    }
+
+    const incrementEpisode = (showId) => {
+        axios.post("https://api.akashjena.site/api/v1/updateWatchlist", {
+          uid,
+          showId,
+          type: "plusOne"
+        })
+          .then((response1) => {
+            console.log("In success", response1.data);
+            if (response1.data.status === "success" && response1.data.episode !== null) {
+              watchData.episodesWatched = response1.data.episode
+              const tmpPercent = (response1.data.episode/showData.episode) * 100
+              setPercent(`${tmpPercent}%`)
+              if(response1.data.episode === 1) {
+                watchData.status = 'Watching'
+              }
+              if(response1.data.episode === showData.episode) {
+                watchData.status = 'Completed'
+                setIncrementBtn(false)
+              }
+              setWatchData(watchData)
+            }
+            else {
+              alert("Something went wrong");
+            }
+          })
+          .catch((error1) => {
+            console.log("In error", error1);
+          });
+      }
+
+    const getShowInfo = (showid) => {
+        axios.post("https://api.akashjena.site/api/v1/getShowInfo", {
+            showId: showid,
+            uid
+        })
+            .then((response1) => {
+                console.log("Here", response1.data);
+                setShowData(response1.data.showData);
+                setWatchData(response1.data.watchData);
+                if (response1.data.watchData.hasOwnProperty('status')) {
+                    setInWatchlist(true)
+                    const tmpPercent = (response1.data.watchData.episodesWatched / response1.data.showData.episode) * 100
+                    setPercent(`${tmpPercent}%`)
+                    if (response1.data.watchData.status === 'Completed') {
+                        setIncrementBtn(false)
+                    }
+                }
+                setIsLoading(false)
+            })
+            .catch((error1) => {
+                // console.log("Error", error1);
+            });
+    }
+
+    const removeShow = (showId) => {
+        axios.post("https://api.akashjena.site/api/v1/removeShowFromWatchlist", {
+            uid,
+            showId
+        })
+            .then((response1) => {
+                // console.log("In success", response1.data);
+                window.location.reload(true)
+            })
+            .catch((error1) => {
+                // console.log("In error", error1);
+            });
+    }
+
+    const addShowforUser = (showId) => {
+        axios.post("https://api.akashjena.site/api/v1/addShowToWatchlist", {
+            uid,
+            showId
+        })
+            .then((response1) => {
+                // console.log("In success", response1.data);
+                window.location.reload(true)
+            })
+            .catch((error1) => {
+                // console.log("In error", error1);
             });
     }
 
     useEffect(() => {
         setIsLoading(true)
-        const timer = setTimeout(() => {
-            getShowInfo(showid);
-        }, 1500);
-        return () => clearTimeout(timer);
+        if (!uid || uid === undefined || uid.length === 0) {
+            const timer = setTimeout(() => {
+                getShowInfoWithoutUid(showid);
+            }, 1500);
+            return () => clearTimeout(timer);
+        }
+        else {
+            const timer = setTimeout(() => {
+                getShowInfo(showid);
+            }, 1500);
+            return () => clearTimeout(timer);
+        }
     }, []);
 
     const getLogo = (platformId) => {
@@ -82,7 +176,17 @@ function ShowPage() {
                         {showData.showName}
                     </div>
                     <div className='showpage_sidebar_button_area'>
-                        <button>Add to watchlist<FontAwesomeIcon icon={faBookmark} /></button>
+                        {(() => {
+                            if (inWatchlist) {
+                                return (
+                                    <button onClick={() => removeShow(showid)}>Remove from watchlist</button>
+                                )
+                            } else {
+                                return (
+                                    <button onClick={() => addShowforUser(showid)} >Add to watchlist<FontAwesomeIcon icon={faBookmark} /></button>
+                                )
+                            }
+                        })()}
                     </div>
                 </div>
                 <div className='showpage_content_area'>
@@ -93,29 +197,111 @@ function ShowPage() {
                                     <h2>Your Status</h2>
                                     <div className='showpage_content_user_status'>
                                         <div className='showpage_content_status_tag'>
-                                            <span>Watching</span>
+                                            <span>{watchData.status}</span>
                                             <button>Edit</button>
                                         </div>
                                         <div className='showpage_content_status_rating'>
-                                            <span className='status_rating_stars'>
-                                                <FontAwesomeIcon icon={faStar} className="yellow"/>
-                                                <FontAwesomeIcon icon={faStar} className="yellow"/>
-                                                <FontAwesomeIcon icon={faStar} className="yellow"/>
-                                                <FontAwesomeIcon icon={faStar} className="yellow"/>
-                                                <FontAwesomeIcon icon={faStar} />
-                                            </span>
-                                            <span className='status_rating_numbers'>4 / 5</span>
+                                            {(() => {
+                                                console.log('Test', watchData)
+                                                if ('rating' in watchData && watchData.rating === 5) {
+                                                    return (
+                                                        <>
+                                                            <span className='status_rating_stars'>
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                            </span>
+                                                            <span className='status_rating_numbers'>5 / 5</span>
+                                                        </>
+                                                    )
+                                                } else if ('rating' in watchData && watchData.rating === 4) {
+                                                    return (
+                                                        <>
+                                                            <span className='status_rating_stars'>
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                            </span>
+                                                            <span className='status_rating_numbers'>4 / 5</span>
+                                                        </>
+                                                    )
+                                                } else if ('rating' in watchData && watchData.rating === 3) {
+                                                    return (
+                                                        <>
+                                                            <span className='status_rating_stars'>
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                            </span>
+                                                            <span className='status_rating_numbers'>3 / 5</span>
+                                                        </>
+                                                    )
+                                                } else if ('rating' in watchData && watchData.rating === 2) {
+                                                    return (
+                                                        <>
+                                                            <span className='status_rating_stars'>
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                            </span>
+                                                            <span className='status_rating_numbers'>2 / 5</span>
+                                                        </>
+                                                    )
+                                                } else if ('rating' in watchData && watchData.rating === 1) {
+                                                    return (
+                                                        <>
+                                                            <span className='status_rating_stars'>
+                                                                <FontAwesomeIcon icon={faStar} className="yellow" />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                                <FontAwesomeIcon icon={faStar} />
+                                                            </span>
+                                                            <span className='status_rating_numbers'>1 / 5</span>
+                                                        </>
+                                                    )
+                                                } else {
+                                                    return (
+                                                        <>
+                                                            <span className='status_rating_stars yellow'>
+                                                                Not Rated Yet
+                                                            </span>
+                                                        </>
+                                                    )
+                                                }
+                                            })()}
                                         </div>
                                         <div className='showpage_content_status_episode'>
                                             <div className='showpage_content_status_episode_progress_area'>
                                                 <div className='progress_graphic_area'>
                                                     <div className='progress_graphic_outer'>
-                                                        <div className='progress_graphic_inner'>
+                                                        <div className='progress_graphic_inner' style={{ width: percent }}>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className='progress_count_area'>
-                                                    <span>14/25</span>
+                                                    <span>{watchData.episodesWatched}/{showData.episode}</span>
+                                                </div>
+                                                <div className='progress_increment_area'>
+                                                    {(() => {
+                                                        if (incrementBtn) {
+                                                            return (
+                                                                <button onClick={() => incrementEpisode(showid)}><FontAwesomeIcon icon={faPlus}/></button>
+                                                            )
+                                                        } else {
+                                                            return (
+                                                                <button disabled><FontAwesomeIcon icon={faPlus}/></button>
+                                                            )
+                                                        }
+                                                    })()}
                                                 </div>
                                             </div>
                                         </div>
@@ -171,7 +357,7 @@ function ShowPage() {
                                         {
                                             showInformation.available.map((eachPlatform) => {
                                                 return (
-                                                    <div className='showpage_content_streaming_img'>
+                                                    <div key={eachPlatform} className='showpage_content_streaming_img'>
                                                         <img src={getLogo(eachPlatform)} alt='' />
                                                     </div>
                                                 )

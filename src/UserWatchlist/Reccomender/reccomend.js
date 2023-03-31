@@ -43,6 +43,7 @@ function Recommend() {
                 recommendedShows.map((eachRecShow) => {
                   return(
                     <RecCard
+                      key = {eachRecShow._id}
                       showid = {eachRecShow._id}
                       showName = {eachRecShow.showName}
                       showPoster = {eachRecShow.showPoster}

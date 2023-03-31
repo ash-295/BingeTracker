@@ -31,7 +31,7 @@
 }
 
 .showpage_body_area .showpage_sidebar .showpage_sidebar_heading {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #ffffff;
     margin: 2% 0%;
     text-align: center;
@@ -224,6 +224,11 @@
     border: none;
 }
 
+.showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_tag button:hover {
+    color: #0086c9;
+    background: #ffffff;
+}
+
 .showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_rating .status_rating_stars {
     margin-right: 20px;
     font-size: 1.7rem;
@@ -243,6 +248,7 @@
 
 .showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area {
     display: flex;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -261,9 +267,37 @@
 
 .showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area .progress_graphic_area .progress_graphic_outer .progress_graphic_inner{
     background-color: #0086c9;
-    width: 120px;
     height: 10px;
     border-radius: 10px;
+}
+
+.showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area .progress_increment_area {
+    margin-left: 20px;
+}
+
+.showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area .progress_increment_area button{
+    background-color: #0086c9;
+    cursor: pointer;
+    border: none;
+    padding: 60% 150%;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area .progress_increment_area button:disabled{
+    background-color: #4e4e4e;
+    cursor: no-drop;
+    color: #ffffff;
+}
+
+.showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area .progress_increment_area button:hover{
+    background-color: #ffffff;
+    color: #0086c9;
+}
+
+.showpage_body_area .showpage_content_area .showpage_content_user_status .showpage_content_status_episode .showpage_content_status_episode_progress_area .progress_increment_area button:disabled:hover{
+    background-color: #4e4e4e;
+    color: #ffffff;
 }
 
 @media (max-width: 800px) {

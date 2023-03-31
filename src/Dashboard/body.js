@@ -24,6 +24,7 @@ function Body() {
                     {trendingData.map((eachData) => {
                         return(
                             <Card
+                                key = {eachData.name}
                                 showimg = {eachData.imgSrc}
                                 name = {eachData.name}
                             />
@@ -42,6 +43,7 @@ function Body() {
                     {movieData.map((eachData) => {
                         return(
                             <Card
+                                key = {eachData.name}
                                 showimg = {eachData.imgSrc}
                                 name = {eachData.name}
                             />
@@ -60,6 +62,7 @@ function Body() {
                     {seriesData.map((eachData) => {
                         return(
                             <Card
+                                key = {eachData.name}
                                 showimg = {eachData.imgSrc}
                                 name = {eachData.name}
                             />

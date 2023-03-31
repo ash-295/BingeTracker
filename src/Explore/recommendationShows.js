@@ -38,12 +38,13 @@ function RecommendationShow() {
                         recommendedShows.map((eachRecShow) => {
                             return (
                                 <RecommendationCard
-                                    showid={eachRecShow._id}
-                                    showName={eachRecShow.showName}
-                                    showPoster={eachRecShow.showPoster}
-                                    rating={eachRecShow.rating}
-                                    ratingCount={eachRecShow.ratingCount}
-                                    description={eachRecShow.description}
+                                    key = {eachRecShow._id}
+                                    showid = {eachRecShow._id}
+                                    showName = {eachRecShow.showName}
+                                    showPoster = {eachRecShow.showPoster}
+                                    rating = {eachRecShow.rating}
+                                    ratingCount = {eachRecShow.ratingCount}
+                                    description = {eachRecShow.description}
                                 />
                             )
                         })
