@@ -20,10 +20,6 @@ function SeriesCard(props) {
   const [iscompleted, setisCompleted] = useState(tmpComp);
   const [progress, setProgress] = useState(props.completionPercentage);
 
-  // if(props.watchedEpisode === props.totalEpisode) {
-  //   setisCompleted(true);
-  // }
-
   switch (props.statusType) {
     case "PlanToWatch":
       categoryColor = "#3c0f66";

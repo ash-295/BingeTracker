@@ -1,0 +1,10 @@
+.search_card_container {
+    width: 15%;
+    border: 3px solid #ffffff;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.search_card_container img {
+    width: 100%;
+}

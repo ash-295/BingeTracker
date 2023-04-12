@@ -3,15 +3,17 @@ import logo from './popcorn.png';
 import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Heading() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
       <div className='heading-area'>
-        <div className='brand'>
+        <div onClick={() => {navigate('/home')}} className='brand'>
           <img src={logo} alt=''></img>
           <h1>BingeTracker</h1>
         </div>

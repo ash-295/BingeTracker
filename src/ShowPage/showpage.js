@@ -125,7 +125,7 @@ function ShowPage() {
         else {
             const timer = setTimeout(() => {
                 getShowInfo(showid);
-            }, 1500);
+            }, 2000);
             return () => clearTimeout(timer);
         }
     }, []);
